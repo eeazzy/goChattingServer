@@ -1,15 +1,36 @@
 package network
 
-type data struct {
+import "github.com/gin-gonic/gin"
+
+type api struct {
+	server *Server
 }
 
 func registerServer(server *Server) {
-	d := &data{}
+	a := &api{server: server}
 
-	r := NewRoom()
-	go r.Run()
+	server.engine.GET("/room-list", a.roomList)
+	server.engine.POST("/make-room", a.makeRoom)
+	server.engine.GET("/room", a.room)
+	server.engine.GET("/enter-room", a.enterRoom)
+	//r := NewRoom()
+	//go r.Run()
+	//
+	//server.engine.GET("/room", r.ServeHTTP)
+}
 
-	engine.GET("/room", r.ServeHTTP)
+func (a *api) roomList(c *gin.Context) {
 
-	return d
+}
+
+func (a *api) makeRoom(c *gin.Context) {
+
+}
+
+func (a *api) room(c *gin.Context) {
+
+}
+
+func (a *api) enterRoom(c *gin.Context) {
+
 }
