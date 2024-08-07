@@ -30,7 +30,7 @@ type Client struct {
 }
 
 type message struct {
-	Name    string    `json:"name"`
+	Name    string    `json:"name"` // 태그를 달아주는 것이 좋음 안하면 Name이렇게 대문자로 보내짐
 	Message string    `json:"message"`
 	Room    string    `json:"room"`
 	When    time.Time `json:"when"`
@@ -83,7 +83,7 @@ func (r *Room) Run() {
 			close(client.Send)        // 이후 client의 socker을 닫는다.
 		case msg := <-r.Forward: // 만약 특정 메시지가 방에 들어오면
 
-			go r.service.InsertChatting(msg.Name, msg.Message, msg.Room)
+			go r.service.InsertChatting(msg.Name, msg.Message, msg.Room) // 서브 스레드 생성해서 처리함
 
 			for client := range r.Clients {
 				client.Send <- msg // 모든 client에게 전달 해 준다.
