@@ -17,6 +17,12 @@ func NewService(repository *repository.Repository) *Service {
 }
 
 // repository 에 있는 쿼리 활용
+func (s *Service) InsertChatting(user, message, roomname string) {
+	if err := s.repository.InsertChatting(user, message, roomname); err != nil {
+		log.Println("Failed to insert chat:", "err", err)
+	}
+}
+
 func (s *Service) EnterRoom(roomName string) ([]*schema.Chat, error) {
 	if res, err := s.repository.GetChatList(roomName); err != nil {
 		log.Println("Failed to get chat list", "err", err.Error())

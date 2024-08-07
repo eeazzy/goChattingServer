@@ -1,7 +1,6 @@
 package network
 
 import (
-	"chat_socket_server/repository"
 	"chat_socket_server/service"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -11,15 +10,14 @@ import (
 type Server struct {
 	engine *gin.Engine
 
-	service    *service.Service
-	repository *repository.Repository
+	service *service.Service
 
 	port string
 	ip   string
 }
 
-func NewServer(service *service.Service, repository *repository.Repository, port string) *Server {
-	s := &Server{engine: gin.New(), service: service, repository: repository, port: port}
+func NewServer(service *service.Service, port string) *Server {
+	s := &Server{engine: gin.New(), service: service, port: port}
 
 	s.engine.Use(gin.Logger())
 	s.engine.Use(gin.Recovery())

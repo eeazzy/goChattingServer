@@ -4,6 +4,7 @@ import (
 	"chat_socket_server/config"
 	"chat_socket_server/types/schema"
 	"database/sql"
+	"log"
 	"strings"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -33,6 +34,14 @@ func NewRepository(cfg *config.Config) (*Repository, error) {
 }
 
 // 쿼리 작성
+func (s *Repository) InsertChatting(user, message, roomname string) error {
+	log.Println("Insert chatting", "from", user, "message", message, "room", roomname)
+
+	_, err := s.db.Exec("INSERT INTO chatting.chat(room,name,message) VALUES(?,?,?)", roomname, user, message)
+
+	return err
+}
+
 func (s *Repository) GetChatList(roomName string) ([]*schema.Chat, error) { // 이름으로 분류한 채팅방 가져오기
 	qs := query([]string{"SELECT * FROM", chat, "WHERE room = ? ORDER BY `when` DESC LIMIT 10"})
 
@@ -104,9 +113,21 @@ func (s *Repository) Room(name string) (*schema.Room, error) {
 		&d.UpdatedAt,
 	)
 
-	return d, err
+	if err = noResult(err); err != nil {
+		return nil, err
+	} else {
+		return nil, nil
+	}
 }
 
 func query(qs []string) string {
 	return strings.Join(qs, " ") + ";"
+}
+
+func noResult(err error) error {
+	if strings.Contains(err.Error(), "sql: no rows in result set") {
+		return nil
+	} else {
+		return err
+	}
 }
