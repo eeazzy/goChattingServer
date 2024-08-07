@@ -1,6 +1,10 @@
 package network
 
-import "github.com/gin-gonic/gin"
+import (
+	"chat_socket_server/types"
+	"github.com/gin-gonic/gin"
+	"net/http"
+)
 
 type api struct {
 	server *Server
@@ -20,17 +24,45 @@ func registerServer(server *Server) {
 }
 
 func (a *api) roomList(c *gin.Context) {
-
+	if res, err := a.server.service.RoomList(); err != nil {
+		response(c, http.StatusInternalServerError, err.Error())
+	} else {
+		response(c, http.StatusOK, res)
+	}
 }
 
-func (a *api) makeRoom(c *gin.Context) {
+func (a *api) makeRoom(c *gin.Context) { // body값 바인딩
+	var req types.BodyRoomReq
 
+	if err := c.ShouldBindJSON(&req); err != nil {
+		response(c, http.StatusUnprocessableEntity, err.Error())
+	} else if err := a.server.service.MakeRoom(req.Name); err != nil {
+		response(c, http.StatusInternalServerError, err.Error())
+	} else {
+		response(c, http.StatusOK, "Success")
+	}
 }
 
-func (a *api) room(c *gin.Context) {
+func (a *api) room(c *gin.Context) { // form 형태
+	var req types.FormRoomReq
 
+	if err := c.ShouldBindQuery(&req); err != nil {
+		response(c, http.StatusUnprocessableEntity, err.Error())
+	} else if res, err := a.server.service.Room(req.Name); err != nil {
+		response(c, http.StatusInternalServerError, err.Error())
+	} else {
+		response(c, http.StatusOK, res)
+	}
 }
 
-func (a *api) enterRoom(c *gin.Context) {
+func (a *api) enterRoom(c *gin.Context) { // form 형태
+	var req types.FormRoomReq
 
+	if err := c.ShouldBindQuery(&req); err != nil {
+		response(c, http.StatusUnprocessableEntity, err.Error())
+	} else if res, err := a.server.service.EnterRoom(req.Name); err != nil {
+		response(c, http.StatusInternalServerError, err.Error())
+	} else {
+		response(c, http.StatusOK, res)
+	}
 }
