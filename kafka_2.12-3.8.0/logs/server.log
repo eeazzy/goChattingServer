@@ -1,0 +1,450 @@
+[2024-08-09 16:00:23,078] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+[2024-08-09 16:00:23,400] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+[2024-08-09 16:00:23,401] INFO RemoteLogManagerConfig values: 
+	log.local.retention.bytes = -2
+	log.local.retention.ms = -2
+	remote.fetch.max.wait.ms = 500
+	remote.log.index.file.cache.total.size.bytes = 1073741824
+	remote.log.manager.copier.thread.pool.size = 10
+	remote.log.manager.copy.max.bytes.per.second = 9223372036854775807
+	remote.log.manager.copy.quota.window.num = 11
+	remote.log.manager.copy.quota.window.size.seconds = 1
+	remote.log.manager.expiration.thread.pool.size = 10
+	remote.log.manager.fetch.max.bytes.per.second = 9223372036854775807
+	remote.log.manager.fetch.quota.window.num = 11
+	remote.log.manager.fetch.quota.window.size.seconds = 1
+	remote.log.manager.task.interval.ms = 30000
+	remote.log.manager.task.retry.backoff.max.ms = 30000
+	remote.log.manager.task.retry.backoff.ms = 500
+	remote.log.manager.task.retry.jitter = 0.2
+	remote.log.manager.thread.pool.size = 10
+	remote.log.metadata.custom.metadata.max.bytes = 128
+	remote.log.metadata.manager.class.name = org.apache.kafka.server.log.remote.metadata.storage.TopicBasedRemoteLogMetadataManager
+	remote.log.metadata.manager.class.path = null
+	remote.log.metadata.manager.impl.prefix = rlmm.config.
+	remote.log.metadata.manager.listener.name = null
+	remote.log.reader.max.pending.tasks = 100
+	remote.log.reader.threads = 10
+	remote.log.storage.manager.class.name = null
+	remote.log.storage.manager.class.path = null
+	remote.log.storage.manager.impl.prefix = rsm.config.
+	remote.log.storage.system.enable = false
+ (org.apache.kafka.server.log.remote.storage.RemoteLogManagerConfig)
+[2024-08-09 16:00:23,448] INFO Registered signal handlers for TERM, INT, HUP (org.apache.kafka.common.utils.LoggingSignalHandler)
+[2024-08-09 16:00:23,448] INFO starting (kafka.server.KafkaServer)
+[2024-08-09 16:00:23,448] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
+[2024-08-09 16:00:23,460] INFO [ZooKeeperClient Kafka server] Initializing a new session to localhost:2181. (kafka.zookeeper.ZooKeeperClient)
+[2024-08-09 16:00:23,463] INFO Client environment:zookeeper.version=3.8.4-9316c2a7a97e1666d8f4593f34dd6fc36ecc436c, built on 2024-02-12 22:16 UTC (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,463] INFO Client environment:host.name=localhost (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,463] INFO Client environment:java.version=17.0.10 (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,463] INFO Client environment:java.vendor=Oracle Corporation (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,463] INFO Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,463] INFO Client environment:java.class.path=/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/activation-1.1.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/aopalliance-repackaged-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/argparse4j-0.7.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/audience-annotations-0.12.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/caffeine-2.9.3.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/checker-qual-3.19.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-beanutils-1.9.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-cli-1.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-collections-3.2.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-digester-2.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-io-2.11.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-lang3-3.12.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-logging-1.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-validator-1.7.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-api-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-basic-auth-extension-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-json-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-mirror-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-mirror-client-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-runtime-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-transforms-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/error_prone_annotations-2.10.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/hk2-api-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/hk2-locator-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/hk2-utils-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-annotations-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-core-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-databind-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-dataformat-csv-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-datatype-jdk8-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-jaxrs-base-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-jaxrs-json-provider-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-module-afterburner-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-module-jaxb-annotations-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-module-scala_2.12-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.activation-api-1.2.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.annotation-api-1.3.5.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.inject-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.validation-api-2.0.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.ws.rs-api-2.1.6.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.xml.bind-api-2.3.3.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javassist-3.29.2-GA.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javax.activation-api-1.2.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javax.annotation-api-1.3.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javax.servlet-api-3.1.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javax.ws.rs-api-2.1.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jaxb-api-2.3.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-client-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-common-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-container-servlet-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-container-servlet-core-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-hk2-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-server-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-client-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-continuation-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-http-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-io-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-security-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-server-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-servlet-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-servlets-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-util-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-util-ajax-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jline-3.25.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jopt-simple-5.0.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jose4j-0.9.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jsr305-3.0.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-clients-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-group-coordinator-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-group-coordinator-api-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-log4j-appender-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-metadata-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-raft-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-server-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-server-common-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-shell-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-storage-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-storage-api-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-streams-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-streams-examples-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-streams-scala_2.12-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-streams-test-utils-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-tools-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-tools-api-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-transaction-coordinator-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka_2.12-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/lz4-java-1.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/maven-artifact-3.9.6.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/metrics-core-2.2.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/metrics-core-4.1.12.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-buffer-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-codec-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-common-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-handler-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-resolver-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-transport-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-transport-classes-epoll-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-transport-native-epoll-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-transport-native-unix-common-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/opentelemetry-proto-1.0.0-alpha.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/osgi-resource-locator-1.0.3.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/paranamer-2.8.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/pcollections-4.0.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/plexus-utils-3.5.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/protobuf-java-3.23.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/reflections-0.10.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/reload4j-1.2.25.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/rocksdbjni-7.9.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-collection-compat_2.12-2.10.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-java8-compat_2.12-1.0.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-library-2.12.19.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-logging_2.12-3.9.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-reflect-2.12.19.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/slf4j-api-1.7.36.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/slf4j-reload4j-1.7.36.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/snappy-java-1.1.10.5.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/swagger-annotations-2.2.8.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/trogdor-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/zookeeper-3.8.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/zookeeper-jute-3.8.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/zstd-jni-1.5.6-3.jar (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:java.library.path=/Users/kimhyeonseo/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:. (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:java.io.tmpdir=/var/folders/z3/gj76rzt16t3cxkk_5fcyvbxc0000gn/T/ (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:os.name=Mac OS X (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:os.arch=aarch64 (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:os.version=14.5 (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:user.name=kimhyeonseo (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:user.home=/Users/kimhyeonseo (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:user.dir=/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:os.memory.free=987MB (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:os.memory.max=1024MB (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,464] INFO Client environment:os.memory.total=1024MB (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,465] INFO Initiating client connection, connectString=localhost:2181 sessionTimeout=18000 watcher=kafka.zookeeper.ZooKeeperClient$ZooKeeperClientWatcher$@4d518b32 (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:23,469] INFO jute.maxbuffer value is 4194304 Bytes (org.apache.zookeeper.ClientCnxnSocket)
+[2024-08-09 16:00:23,473] INFO zookeeper.request.timeout value is 0. feature enabled=false (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:23,474] INFO [ZooKeeperClient Kafka server] Waiting until connected. (kafka.zookeeper.ZooKeeperClient)
+[2024-08-09 16:00:23,474] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:23,479] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:24,589] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:24,591] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:25,700] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:25,702] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:26,809] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:26,811] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:27,919] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:27,921] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:29,029] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:29,031] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:30,140] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:30,142] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:31,250] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:31,252] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:32,358] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:32,360] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:33,467] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:33,469] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:34,575] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:34,577] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:35,683] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:35,685] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:36,795] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:36,797] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:37,906] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:37,908] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:39,018] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:39,020] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:40,127] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:40,128] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:41,238] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:41,240] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:00:41,481] INFO [ZooKeeperClient Kafka server] Closing. (kafka.zookeeper.ZooKeeperClient)
+[2024-08-09 16:00:42,351] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:42,461] INFO Session: 0x0 closed (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:00:42,462] INFO EventThread shut down for session: 0x0 (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:00:42,464] INFO [ZooKeeperClient Kafka server] Closed. (kafka.zookeeper.ZooKeeperClient)
+[2024-08-09 16:00:42,466] ERROR Fatal error during KafkaServer startup. Prepare to shutdown (kafka.server.KafkaServer)
+kafka.zookeeper.ZooKeeperClientTimeoutException: Timed out waiting for connection while in state: CONNECTING
+	at kafka.zookeeper.ZooKeeperClient.$anonfun$waitUntilConnected$3(ZooKeeperClient.scala:257)
+	at kafka.zookeeper.ZooKeeperClient.waitUntilConnected(ZooKeeperClient.scala:253)
+	at kafka.zookeeper.ZooKeeperClient.<init>(ZooKeeperClient.scala:115)
+	at kafka.zk.KafkaZkClient$.apply(KafkaZkClient.scala:2317)
+	at kafka.zk.KafkaZkClient$.createZkClient(KafkaZkClient.scala:2407)
+	at kafka.server.KafkaServer.initZkClient(KafkaServer.scala:742)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:230)
+	at kafka.Kafka$.main(Kafka.scala:112)
+	at kafka.Kafka.main(Kafka.scala)
+[2024-08-09 16:00:42,467] INFO shutting down (kafka.server.KafkaServer)
+[2024-08-09 16:00:42,477] INFO App info kafka.server for 0 unregistered (org.apache.kafka.common.utils.AppInfoParser)
+[2024-08-09 16:00:42,478] INFO shut down completed (kafka.server.KafkaServer)
+[2024-08-09 16:00:42,478] ERROR Exiting Kafka due to fatal exception during startup. (kafka.Kafka$)
+kafka.zookeeper.ZooKeeperClientTimeoutException: Timed out waiting for connection while in state: CONNECTING
+	at kafka.zookeeper.ZooKeeperClient.$anonfun$waitUntilConnected$3(ZooKeeperClient.scala:257)
+	at kafka.zookeeper.ZooKeeperClient.waitUntilConnected(ZooKeeperClient.scala:253)
+	at kafka.zookeeper.ZooKeeperClient.<init>(ZooKeeperClient.scala:115)
+	at kafka.zk.KafkaZkClient$.apply(KafkaZkClient.scala:2317)
+	at kafka.zk.KafkaZkClient$.createZkClient(KafkaZkClient.scala:2407)
+	at kafka.server.KafkaServer.initZkClient(KafkaServer.scala:742)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:230)
+	at kafka.Kafka$.main(Kafka.scala:112)
+	at kafka.Kafka.main(Kafka.scala)
+[2024-08-09 16:00:42,479] INFO shutting down (kafka.server.KafkaServer)
+[2024-08-09 16:03:01,510] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+[2024-08-09 16:03:02,070] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+[2024-08-09 16:03:02,071] INFO RemoteLogManagerConfig values: 
+	log.local.retention.bytes = -2
+	log.local.retention.ms = -2
+	remote.fetch.max.wait.ms = 500
+	remote.log.index.file.cache.total.size.bytes = 1073741824
+	remote.log.manager.copier.thread.pool.size = 10
+	remote.log.manager.copy.max.bytes.per.second = 9223372036854775807
+	remote.log.manager.copy.quota.window.num = 11
+	remote.log.manager.copy.quota.window.size.seconds = 1
+	remote.log.manager.expiration.thread.pool.size = 10
+	remote.log.manager.fetch.max.bytes.per.second = 9223372036854775807
+	remote.log.manager.fetch.quota.window.num = 11
+	remote.log.manager.fetch.quota.window.size.seconds = 1
+	remote.log.manager.task.interval.ms = 30000
+	remote.log.manager.task.retry.backoff.max.ms = 30000
+	remote.log.manager.task.retry.backoff.ms = 500
+	remote.log.manager.task.retry.jitter = 0.2
+	remote.log.manager.thread.pool.size = 10
+	remote.log.metadata.custom.metadata.max.bytes = 128
+	remote.log.metadata.manager.class.name = org.apache.kafka.server.log.remote.metadata.storage.TopicBasedRemoteLogMetadataManager
+	remote.log.metadata.manager.class.path = null
+	remote.log.metadata.manager.impl.prefix = rlmm.config.
+	remote.log.metadata.manager.listener.name = null
+	remote.log.reader.max.pending.tasks = 100
+	remote.log.reader.threads = 10
+	remote.log.storage.manager.class.name = null
+	remote.log.storage.manager.class.path = null
+	remote.log.storage.manager.impl.prefix = rsm.config.
+	remote.log.storage.system.enable = false
+ (org.apache.kafka.server.log.remote.storage.RemoteLogManagerConfig)
+[2024-08-09 16:03:02,117] INFO Registered signal handlers for TERM, INT, HUP (org.apache.kafka.common.utils.LoggingSignalHandler)
+[2024-08-09 16:03:02,117] INFO starting (kafka.server.KafkaServer)
+[2024-08-09 16:03:02,117] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
+[2024-08-09 16:03:02,129] INFO [ZooKeeperClient Kafka server] Initializing a new session to localhost:2181. (kafka.zookeeper.ZooKeeperClient)
+[2024-08-09 16:03:02,132] INFO Client environment:zookeeper.version=3.8.4-9316c2a7a97e1666d8f4593f34dd6fc36ecc436c, built on 2024-02-12 22:16 UTC (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,132] INFO Client environment:host.name=localhost (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,132] INFO Client environment:java.version=17.0.10 (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,132] INFO Client environment:java.vendor=Oracle Corporation (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,132] INFO Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,132] INFO Client environment:java.class.path=/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/activation-1.1.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/aopalliance-repackaged-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/argparse4j-0.7.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/audience-annotations-0.12.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/caffeine-2.9.3.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/checker-qual-3.19.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-beanutils-1.9.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-cli-1.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-collections-3.2.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-digester-2.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-io-2.11.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-lang3-3.12.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-logging-1.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/commons-validator-1.7.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-api-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-basic-auth-extension-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-json-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-mirror-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-mirror-client-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-runtime-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/connect-transforms-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/error_prone_annotations-2.10.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/hk2-api-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/hk2-locator-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/hk2-utils-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-annotations-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-core-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-databind-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-dataformat-csv-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-datatype-jdk8-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-jaxrs-base-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-jaxrs-json-provider-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-module-afterburner-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-module-jaxb-annotations-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jackson-module-scala_2.12-2.16.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.activation-api-1.2.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.annotation-api-1.3.5.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.inject-2.6.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.validation-api-2.0.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.ws.rs-api-2.1.6.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jakarta.xml.bind-api-2.3.3.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javassist-3.29.2-GA.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javax.activation-api-1.2.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javax.annotation-api-1.3.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javax.servlet-api-3.1.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/javax.ws.rs-api-2.1.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jaxb-api-2.3.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-client-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-common-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-container-servlet-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-container-servlet-core-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-hk2-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jersey-server-2.39.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-client-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-continuation-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-http-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-io-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-security-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-server-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-servlet-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-servlets-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-util-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jetty-util-ajax-9.4.54.v20240208.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jline-3.25.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jopt-simple-5.0.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jose4j-0.9.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/jsr305-3.0.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-clients-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-group-coordinator-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-group-coordinator-api-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-log4j-appender-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-metadata-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-raft-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-server-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-server-common-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-shell-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-storage-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-storage-api-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-streams-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-streams-examples-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-streams-scala_2.12-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-streams-test-utils-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-tools-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-tools-api-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka-transaction-coordinator-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/kafka_2.12-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/lz4-java-1.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/maven-artifact-3.9.6.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/metrics-core-2.2.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/metrics-core-4.1.12.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-buffer-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-codec-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-common-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-handler-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-resolver-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-transport-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-transport-classes-epoll-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-transport-native-epoll-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/netty-transport-native-unix-common-4.1.110.Final.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/opentelemetry-proto-1.0.0-alpha.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/osgi-resource-locator-1.0.3.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/paranamer-2.8.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/pcollections-4.0.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/plexus-utils-3.5.1.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/protobuf-java-3.23.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/reflections-0.10.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/reload4j-1.2.25.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/rocksdbjni-7.9.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-collection-compat_2.12-2.10.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-java8-compat_2.12-1.0.2.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-library-2.12.19.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-logging_2.12-3.9.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/scala-reflect-2.12.19.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/slf4j-api-1.7.36.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/slf4j-reload4j-1.7.36.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/snappy-java-1.1.10.5.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/swagger-annotations-2.2.8.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/trogdor-3.8.0.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/zookeeper-3.8.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/zookeeper-jute-3.8.4.jar:/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin/../libs/zstd-jni-1.5.6-3.jar (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,132] INFO Client environment:java.library.path=/Users/kimhyeonseo/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:. (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:java.io.tmpdir=/var/folders/z3/gj76rzt16t3cxkk_5fcyvbxc0000gn/T/ (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:os.name=Mac OS X (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:os.arch=aarch64 (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:os.version=14.5 (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:user.name=kimhyeonseo (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:user.home=/Users/kimhyeonseo (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:user.dir=/Users/kimhyeonseo/Desktop/inflearn/golang_chat/kafka_2.12-3.8.0/bin (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:os.memory.free=987MB (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:os.memory.max=1024MB (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,133] INFO Client environment:os.memory.total=1024MB (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,134] INFO Initiating client connection, connectString=localhost:2181 sessionTimeout=18000 watcher=kafka.zookeeper.ZooKeeperClient$ZooKeeperClientWatcher$@4d518b32 (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:02,138] INFO jute.maxbuffer value is 4194304 Bytes (org.apache.zookeeper.ClientCnxnSocket)
+[2024-08-09 16:03:02,141] INFO zookeeper.request.timeout value is 0. feature enabled=false (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:02,142] INFO [ZooKeeperClient Kafka server] Waiting until connected. (kafka.zookeeper.ZooKeeperClient)
+[2024-08-09 16:03:02,142] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:02,147] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:03,255] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:03,258] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:04,370] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:04,371] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:05,477] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:05,479] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:06,588] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:06,589] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:07,699] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:07,701] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:08,807] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:08,809] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:09,920] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:09,922] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:11,029] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:11,031] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:12,142] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:12,144] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:13,252] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:13,253] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:14,362] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:14,364] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:15,475] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:15,476] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:16,588] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:16,589] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:17,696] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:17,698] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:18,804] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:18,807] WARN Session 0x0 for server localhost/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:19,919] INFO Opening socket connection to server localhost/[0:0:0:0:0:0:0:1]:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:19,920] WARN Session 0x0 for server localhost/[0:0:0:0:0:0:0:1]:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. (org.apache.zookeeper.ClientCnxn)
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1289)
+[2024-08-09 16:03:20,149] INFO [ZooKeeperClient Kafka server] Closing. (kafka.zookeeper.ZooKeeperClient)
+[2024-08-09 16:03:21,028] INFO Opening socket connection to server localhost/127.0.0.1:2181. (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:21,143] INFO Session: 0x0 closed (org.apache.zookeeper.ZooKeeper)
+[2024-08-09 16:03:21,144] INFO EventThread shut down for session: 0x0 (org.apache.zookeeper.ClientCnxn)
+[2024-08-09 16:03:21,145] INFO [ZooKeeperClient Kafka server] Closed. (kafka.zookeeper.ZooKeeperClient)
+[2024-08-09 16:03:21,148] ERROR Fatal error during KafkaServer startup. Prepare to shutdown (kafka.server.KafkaServer)
+kafka.zookeeper.ZooKeeperClientTimeoutException: Timed out waiting for connection while in state: CONNECTING
+	at kafka.zookeeper.ZooKeeperClient.$anonfun$waitUntilConnected$3(ZooKeeperClient.scala:257)
+	at kafka.zookeeper.ZooKeeperClient.waitUntilConnected(ZooKeeperClient.scala:253)
+	at kafka.zookeeper.ZooKeeperClient.<init>(ZooKeeperClient.scala:115)
+	at kafka.zk.KafkaZkClient$.apply(KafkaZkClient.scala:2317)
+	at kafka.zk.KafkaZkClient$.createZkClient(KafkaZkClient.scala:2407)
+	at kafka.server.KafkaServer.initZkClient(KafkaServer.scala:742)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:230)
+	at kafka.Kafka$.main(Kafka.scala:112)
+	at kafka.Kafka.main(Kafka.scala)
+[2024-08-09 16:03:21,148] INFO shutting down (kafka.server.KafkaServer)
+[2024-08-09 16:03:21,159] INFO App info kafka.server for 0 unregistered (org.apache.kafka.common.utils.AppInfoParser)
+[2024-08-09 16:03:21,160] INFO shut down completed (kafka.server.KafkaServer)
+[2024-08-09 16:03:21,160] ERROR Exiting Kafka due to fatal exception during startup. (kafka.Kafka$)
+kafka.zookeeper.ZooKeeperClientTimeoutException: Timed out waiting for connection while in state: CONNECTING
+	at kafka.zookeeper.ZooKeeperClient.$anonfun$waitUntilConnected$3(ZooKeeperClient.scala:257)
+	at kafka.zookeeper.ZooKeeperClient.waitUntilConnected(ZooKeeperClient.scala:253)
+	at kafka.zookeeper.ZooKeeperClient.<init>(ZooKeeperClient.scala:115)
+	at kafka.zk.KafkaZkClient$.apply(KafkaZkClient.scala:2317)
+	at kafka.zk.KafkaZkClient$.createZkClient(KafkaZkClient.scala:2407)
+	at kafka.server.KafkaServer.initZkClient(KafkaServer.scala:742)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:230)
+	at kafka.Kafka$.main(Kafka.scala:112)
+	at kafka.Kafka.main(Kafka.scala)
+[2024-08-09 16:03:21,160] INFO shutting down (kafka.server.KafkaServer)
