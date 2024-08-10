@@ -2,10 +2,15 @@ package network
 
 import (
 	"chat_socket_server/service"
+	"github.com/confluentinc/confluent-kafka-go/kafka"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/goccy/go-json"
 	"log"
 	"net"
+	"os"
+	"os/signal"
+	"syscall"
 )
 
 type Server struct {
@@ -68,6 +73,40 @@ func (s *Server) setServerInfo() {
 
 func (s *Server) StartServer() error {
 	s.setServerInfo() // 서버시작 시 정보 저장
+
+	channel := make(chan os.Signal, 1)     // 이벤트를 받을 수 있는 변수
+	signal.Notify(channel, syscall.SIGINT) // 서버가 죽었을 때 메세지 전송함
+
+	go func() {
+		<-channel // 여기에 값이 들어오면 뒤의 로직이 실행된다
+		// db변경
+		if err := s.service.ServerSet(s.ip+s.port, false); err != nil {
+			log.Println("Failed to set server info when close", "err", err)
+		}
+
+		// kafka에 이벤트 전송
+		type ServerInfoEvent struct {
+			IP     string
+			Status bool
+		}
+
+		e := &ServerInfoEvent{
+			IP:     s.ip + s.port,
+			Status: false,
+		}
+		ch := make(chan kafka.Event)
+
+		if v, err := json.Marshal(e); err != nil {
+			log.Println("Failed to marshal server info")
+		} else if result, err := s.service.PublishEvent("chat", v, ch); err != nil {
+			// 카프카에 보내기
+			log.Println("Failed to publish event to kafka", "err", err)
+		} else {
+			log.Println("Published event to kafka", result)
+		}
+
+		os.Exit(1)
+	}()
 
 	log.Printf("Start Tx Server")
 	return s.engine.Run(s.port)

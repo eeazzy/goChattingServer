@@ -3,6 +3,7 @@ package service
 import (
 	"chat_socket_server/repository"
 	"chat_socket_server/types/schema"
+	"github.com/confluentinc/confluent-kafka-go/kafka"
 	"log"
 )
 
@@ -14,6 +15,10 @@ func NewService(repository *repository.Repository) *Service {
 	s := &Service{repository: repository}
 
 	return s
+}
+
+func (s *Service) PublishEvent(topic string, value []byte, ch chan kafka.Event) (kafka.Event, error) {
+	return s.repository.Kafka.PublishEvent(topic, value, ch)
 }
 
 // repository 에 있는 쿼리 활용
