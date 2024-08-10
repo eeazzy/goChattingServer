@@ -5,6 +5,7 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"log"
+	"net"
 )
 
 type Server struct {
@@ -37,7 +38,37 @@ func NewServer(service *service.Service, port string) *Server {
 	return s
 }
 
+func (s *Server) setServerInfo() {
+	// IP를 가져오고
+	// IP를 기반으로, mySQL serverInfo 테이블 변경함
+	if addrs, err := net.InterfaceAddrs(); err != nil {
+		panic(err.Error())
+	} else { // ip주소를 가져온다
+		var ip net.IP
+		for _, addr := range addrs {
+			if ipnet, ok := addr.(*net.IPNet); ok {
+				if !ipnet.IP.IsLoopback() && ipnet.IP.To4() != nil {
+					ip = ipnet.IP
+					break
+				}
+			}
+		}
+
+		if ip == nil {
+			panic("no valid ip address")
+		} else {
+			if err := s.service.ServerSet(ip.String()+s.port, true); err != nil {
+				panic(err)
+			} else {
+				s.ip = ip.String()
+			}
+		}
+	}
+}
+
 func (s *Server) StartServer() error {
+	s.setServerInfo() // 서버시작 시 정보 저장
+
 	log.Printf("Start Tx Server")
 	return s.engine.Run(s.port)
 }

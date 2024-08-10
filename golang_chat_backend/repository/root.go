@@ -39,6 +39,11 @@ func NewRepository(cfg *config.Config) (*Repository, error) {
 }
 
 // 쿼리 작성
+func (s *Repository) ServerSet(ip string, available bool) error { // ip에 대해 기존의 데이터가 존재한다면 update만 해라
+	_, err := s.db.Exec("INSERT INTO serverInfo(`ip`, `available`) VALUES(?, ?) ON DUPLICATE KEY UPDATE `available` = VALUES(`available`);", ip, available)
+	return err
+}
+
 func (s *Repository) InsertChatting(user, message, roomname string) error {
 	log.Println("Insert chatting", "from", user, "message", message, "room", roomname)
 

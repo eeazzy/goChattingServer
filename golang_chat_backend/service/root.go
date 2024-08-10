@@ -17,6 +17,15 @@ func NewService(repository *repository.Repository) *Service {
 }
 
 // repository 에 있는 쿼리 활용
+func (s *Service) ServerSet(ip string, available bool) error {
+	if err := s.repository.ServerSet(ip, available); err != nil {
+		log.Println("Failed to set server", "ip", ip, "available", available)
+		return err
+	} else {
+		return nil
+	}
+}
+
 func (s *Service) InsertChatting(user, message, roomname string) {
 	if err := s.repository.InsertChatting(user, message, roomname); err != nil {
 		log.Println("Failed to insert chat:", "err", err)
