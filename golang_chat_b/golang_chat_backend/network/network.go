@@ -2,10 +2,8 @@ package network
 
 import (
 	"chat_socket_server/service"
-	"github.com/confluentinc/confluent-kafka-go/kafka"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/goccy/go-json"
 	"log"
 	"net"
 	"os"
@@ -67,6 +65,8 @@ func (s *Server) setServerInfo() {
 			} else {
 				s.ip = ip.String()
 			}
+
+			s.service.PublishServerStatusEvent(s.ip+s.port, true)
 		}
 	}
 }
@@ -84,26 +84,7 @@ func (s *Server) StartServer() error {
 			log.Println("Failed to set server info when close", "err", err)
 		}
 
-		// kafka에 이벤트 전송
-		type ServerInfoEvent struct {
-			IP     string
-			Status bool
-		}
-
-		e := &ServerInfoEvent{
-			IP:     s.ip + s.port,
-			Status: false,
-		}
-		ch := make(chan kafka.Event)
-
-		if v, err := json.Marshal(e); err != nil {
-			log.Println("Failed to marshal server info")
-		} else if result, err := s.service.PublishEvent("chat", v, ch); err != nil {
-			// 카프카에 보내기
-			log.Println("Failed to publish event to kafka", "err", err)
-		} else {
-			log.Println("Published event to kafka", result)
-		}
+		s.service.PublishServerStatusEvent(s.ip+s.port, false)
 
 		os.Exit(1)
 	}()

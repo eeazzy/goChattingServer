@@ -13,7 +13,6 @@ type Server struct {
 	service *service.Service
 
 	port string
-	ip   string
 }
 
 func NewNetwork(service *service.Service, port string) *Server {
@@ -31,6 +30,8 @@ func NewNetwork(service *service.Service, port string) *Server {
 			return true
 		},
 	}))
+
+	resisterTowerAPI(s)
 
 	return s
 }
