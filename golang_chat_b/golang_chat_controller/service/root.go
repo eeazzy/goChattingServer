@@ -3,6 +3,7 @@ package service
 import (
 	"chat_controller_server/repository"
 	"chat_controller_server/types/table"
+	"encoding/json"
 	"fmt"
 	. "github.com/confluentinc/confluent-kafka-go/kafka"
 	"log"
@@ -33,7 +34,21 @@ func (s *Service) loopSubKafka() {
 		ev := s.repository.Kafka.Pool(100)
 		switch event := ev.(type) {
 		case *Message:
-			fmt.Println(event)
+
+			type ServerInfoEvent struct {
+				IP    string
+				Stats bool
+			}
+
+			var decoder ServerInfoEvent
+
+			if err := json.Unmarshal(event.Value, &decoder); err != nil {
+				log.Println("Failed to decode server info", event.Value)
+			} else {
+				fmt.Println(decoder)
+				s.AvgServerList[decoder.IP] = decoder.Stats
+			}
+
 		case *Error:
 			log.Println("Failed to pooling event", event.Error())
 		}
